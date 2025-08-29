@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Consulta Fácil</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/logoConsultaFacila.png">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo-sidebar">
+            <img src="assets/logoConsultaFacila.png" alt="Logo" class="header-logo">
+        </div>
+        <nav class="navegacao-lateral">
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+            <button class="btn-buscar">Buscar Consultas</button>
+        </nav>
+    </aside>
+
+    <main class="conteudo">
+        <h1>Bem-vindo à Consulta Fácil!</h1>
+        <p>Encontre e marque suas consultas de forma rápida e prática.</p>
+        
+        <a href="#" id="btn-marcar-consulta" class="btn-home">Marcar Consulta</a>
+        <div id="modal-fundo" class="modal-fundo"></div>
+
+       <div id="busca-container" class="busca-container" style="display: none;">
+    <h2>Buscar Consultas</h2>
+    <input type="text" id="nomeBusca" placeholder="Informe nome ou cpf">
+    <button id="btnPesquisar">Pesquisar</button>
+    <div id="resultadoBusca" class="resultado-busca"></div>
+</div>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2023 Consulta Fácil. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

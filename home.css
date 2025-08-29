@@ -1,0 +1,125 @@
+/* Sidebar para Home */
+body{
+     font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, #00C9A7, #008f7a, #4DA6FF);
+    width: 220px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+/* Logo da sidebar */
+.logo-sidebar .header-logo {
+    max-height: 60px;
+    width: auto;
+    margin-bottom: 30px;
+}
+
+/* Links de navegação */
+.navegacao-lateral {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.navegacao-lateral a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.navegacao-lateral a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Botão Buscar */
+.btn-buscar {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-buscar:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Conteúdo principal ajustado */
+.conteudo {
+    flex-grow: 1;
+    padding: 30px;
+    /* Novas propriedades para centralização */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Centraliza o container de busca */
+.busca-container {
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto; /* centraliza horizontalmente */
+}
+
+/* Input e botão */
+.busca-container input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.busca-container button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.busca-container button:hover {
+    background-color: #34495e;
+}
+
+/* Resultado */
+.resultado-busca {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    min-height: 40px;
+    text-align: center;
+    color: #333;
+}
