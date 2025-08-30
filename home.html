@@ -8,36 +8,36 @@
     <link rel="icon" type="image/png" sizes="64x64" href="assets/logoConsultaFacila.png">
 </head>
 <body>
-    <aside class="sidebar">
-        <div class="logo-sidebar">
-            <img src="assets/logoConsultaFacila.png" alt="Logo" class="header-logo">
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-sidebar">
+                <img src="assets/logoConsultaFacila.png" alt="Logo" class="header-logo" >
+            </div>
+
+                <nav class="navegacao-lateral">
+                    <button onclick="location.href='index.html'" class="btn-marcar-consulta">Agendar</button>
+                    <button class="btn-buscar">Meus agendamentos</button>
+                </nav>
+
+            <!-- Área de busca(inicialmente oculta) -->
+            <div id="busca-container" class="busca-container" style="display: none;">
+                <input type="text" id="nomeBusca" placeholder="Informe nome completo ou CPF">
+                <button id="btnPesquisar">Pesquisar</button>
+                <p id="resultadoBusca" class="resultado-busca"></p>
+            </div>
+
+            
+   <footer class="rodape">
+        <p>&copy; 2025 Consulta Fácil. Todos os direitos reservados.</p>
+   </footer>
+        </aside>
+
+        <!-- Imagem ao lado da sidebar -->
+        <div class="form-image">
+            <img src="assets/designConsultaFacil.JPG" alt="Design Consulta Fácil">
         </div>
-        <nav class="navegacao-lateral">
-            <a href="home.html">Home</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contato.html">Contato</a>
-            <button class="btn-buscar">Buscar Consultas</button>
-        </nav>
-    </aside>
-
-    <main class="conteudo">
-        <h1>Bem-vindo à Consulta Fácil!</h1>
-        <p>Encontre e marque suas consultas de forma rápida e prática.</p>
-        
-        <a href="#" id="btn-marcar-consulta" class="btn-home">Marcar Consulta</a>
-        <div id="modal-fundo" class="modal-fundo"></div>
-
-       <div id="busca-container" class="busca-container" style="display: none;">
-    <h2>Buscar Consultas</h2>
-    <input type="text" id="nomeBusca" placeholder="Informe nome ou cpf">
-    <button id="btnPesquisar">Pesquisar</button>
-    <div id="resultadoBusca" class="resultado-busca"></div>
-</div>
-    </main>
-
-    <footer class="rodape">
-        <p>&copy; 2023 Consulta Fácil. Todos os direitos reservados.</p>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
