@@ -40,6 +40,7 @@ Evitar redundância de horários:
 Impedir que dois exames sejam agendados no mesmo horário.
 
 📂 Estrutura do Projeto
+```
 consulta-facil/
 ├── index.html            # Página de agendamento de consultas
 ├── home.html             # Página inicial com sidebar
@@ -49,7 +50,7 @@ consulta-facil/
 └── assets/
     ├── logoConsultaFacila.png
     └── designConsultaFacil.JPG
-
+```
 👥 Equipe de Desenvolvimento
 
 Pedro Matos
