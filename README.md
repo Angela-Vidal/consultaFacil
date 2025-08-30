@@ -51,6 +51,21 @@ consulta-facil/
     ├── logoConsultaFacila.png
     └── designConsultaFacil.JPG
 ```
+▶️ Como Rodar o Projeto
+
+1. Clone o repositório:
+```
+git clone https://github.com/Angela-Vidal/consultaFacil.git
+```
+2. Abrir no navegador:
+- Navegue até a pasta do projeto e abra o arquivo index.html em qualquer navegador moderno
+(Chrome, Edge, Firefox, etc.).
+- Você pode dar duplo clique no arquivo ou abrir diretamente pelo navegador.
+  
+3. Pronto para uso:
+- O sistema estará disponível e você pode testar o formulário de agendamento e a página Home
+com a sidebar e busca simulada.
+
 👥 Equipe de Desenvolvimento
 
 Pedro Matos
