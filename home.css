@@ -125,12 +125,12 @@ body {
     
 }
 .form-image {
-  content: url("assets/designConsultaFacil.JPG");
+  content: url("assets/designConsultaFacil.JPG"); /*imagem para desktop*/
 }
 
 @media (max-width: 700px) {
   .form-image {
-    content: url("assets/designConsultaFacil2.JPG");
+    content: url("assets/designconsultaFacil2.JPG"); /*imagem para mobile*/
   }
 }
 
