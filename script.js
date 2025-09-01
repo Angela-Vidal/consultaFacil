@@ -37,9 +37,46 @@ btnPesquisar.addEventListener('click', async () => {
         if (consultas.length > 0) {
             consultas.forEach(consulta => {
                 const dataFormatada = new Date(consulta.data_consulta).toLocaleDateString('pt-BR');
+
+                // Criando container para cada consulta
+                const div = document.createElement('div');
+                div.classList.add('consulta-item');
+
+                // Texto da consulta
                 const p = document.createElement('p');
                 p.textContent = `Paciente: ${consulta.nome} - Especialidade: ${consulta.nome_especialidade} - Data: ${dataFormatada}`;
-                resultadoBusca.appendChild(p);
+
+                // Botão Cancelar
+                const btnCancelar = document.createElement('button');
+                btnCancelar.textContent = "Cancelar Consulta";
+                btnCancelar.classList.add('btn-cancelar');
+
+                // Adiciona evento ao botão
+                btnCancelar.addEventListener('click', async () => {
+                    if (confirm("Tem certeza que deseja cancelar esta consulta?")) {
+                        try {
+                            const delResponse = await fetch(`http://localhost:3001/api/consultas/${consulta.id_consulta}`, {
+                                method: 'DELETE'
+                            });
+
+                            if (!delResponse.ok) {
+                                const erro = await delResponse.json();
+                                throw new Error(erro.message || 'Erro ao cancelar consulta.');
+                            }
+
+                            alert("Consulta cancelada com sucesso!");
+                            window.location.href = "index.html"; // redireciona
+
+                        } catch (error) {
+                            console.error("Erro ao cancelar consulta:", error);
+                            alert("Erro ao cancelar consulta. Tente novamente.");
+                        }
+                    }
+                });
+
+                div.appendChild(p);
+                div.appendChild(btnCancelar);
+                resultadoBusca.appendChild(div);
             });
         } else {
             resultadoBusca.textContent = `Nenhum resultado encontrado para: ${termo}`;
@@ -67,6 +104,7 @@ modalFundo.addEventListener('click', () => {
     modalFundo.style.display = 'none';
 });
 */
+// ----- ATUALIZAÇÃO DE IMAGEM RESPONSIVA -----
 function atualizarImagem() {
     const img = document.getElementById("designImg");
     if (!img) return;
